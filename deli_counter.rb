@@ -5,10 +5,9 @@ def line(array)
   if array.length >= 1
     line_array = []
     counter = 1 
-    array.each do |name|
-      line_array.push("#{counter}. #{name}")
+    array.each {|name| line_array << ("#{counter}. #{name}")}
       counter += 1 
-    end 
+
     puts "The line is currently: #{line_array.join(" ")}"
   else
     puts "The line is currently empty."
